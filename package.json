@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && pnpm run build:server && pnpm run build:insert",
     "build:server": "vite build --ssr src/main-at-server.tsx  --outDir dist/server",
     "build:insert": "pnpm dlx tsx ./insert-app.ts",
     "lint": "eslint .",
